@@ -1,0 +1,34 @@
+def solve(n):
+	l=0
+	#l le nombre de nombre de lychrel
+	for i in range(n):
+		c=False
+		for j in range(16):
+			if not c:
+				if d==renverse(d):
+					c=True
+            d=i+renverse(i)
+		#test : i est il un nombre de lychrel?
+		l+=1
+	return(l)  
+
+def renverse(n):
+    a=str(n)
+    b=''
+    L=[]
+    for i in a:
+        L.append(i)
+		#on cree une liste de chaine de caracteres avec les chiffres de n
+        for j in range(len(L),-1):
+		#on prends la liste dans l'autre sens de maniere a retourner le chiffre
+            b+=j
+		#b est devenu le nombre renverse de n
+            print(b)
+    return(int(b))
+
+#La fonction renverse transforme le nombre en str pour en dissocier les lettres 
+#puis pour les interchanger a l aide d'une liste
+#La fonction solve teste tous les nombres i de 1 à n pour savoir si ils sont de Lychrel ou non
+#c'est a dire elle essaye 15fois de voir si le nombre retourné n est pas lui meme
+
+#je pense que dans la théorie l'idee fonctionne mais le code ne veut pas fonctionner
